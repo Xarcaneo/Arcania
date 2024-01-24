@@ -1,0 +1,63 @@
+﻿/* index.css */
+
+/* Set styles for the main container */
+.main-container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Set styles for the left frame with game description */
+.left-frame,
+.right-frame {
+    flex: 1;
+    background-color: #F5D2BB;
+    color: #101829;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+
+ 
+    padding: 10px; /* Add padding to the text within the frames */
+}
+
+/* Set styles for the label background */
+.label-background {
+    background-color: #554174;
+}
+
+/* Set styles for the registration buttons container */
+.registration-buttons-container {
+    text-align: center; /* Center the buttons horizontally */
+    padding: 15px;
+    justify-content: center; /* Center the buttons within the container */
+}
+
+.registration-button {
+    display: inline-block; /* Make the buttons appear in a line */
+    margin: 0 10px; /* Add horizontal margin between buttons */
+    padding: 15px; /* Increase padding for a larger button */
+    max-width: 200px; /* Set maximum width for the button */
+    background-color: #554174; /* English Violet from the palette */
+    color: #c5c6e2; /* Light color for text */
+    text-decoration: none; /* Remove underline from the link */
+    border: none; /* Remove button border */
+    border-radius: 25px; /* Add a larger border radius for a fantasy look */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center; /* Center the text horizontally */
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Adjust the font size */
+}
+
+    .registration-button:hover {
+        background-color: #372A3D; /* Dark Purple from the palette on hover */
+        color: #c5c6e2; /* Light color for text on hover */
+        transform: translateY(-2px); /* Add a slight upward lift on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+    }
+/* banner.css */
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}

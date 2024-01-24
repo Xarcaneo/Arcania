@@ -1,0 +1,17 @@
+﻿/* Arcania.styles.css */
+
+/* Set the background color for the whole page */
+body {
+    background-color: #121a2b;
+    color: #ede4da;
+}
+
+label {
+    color: black; /* Black text color */
+}
+
+/* Set the overall styling for the HTML document */
+html {
+    position: relative;
+    min-height: 100%;
+}

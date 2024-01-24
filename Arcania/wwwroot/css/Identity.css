@@ -1,0 +1,83 @@
+﻿/* Custom styles */
+body {
+    color: black;
+    margin-top: 100px;
+}
+
+/* Center the entire content */
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh; /* Adjust as needed for full vertical height */
+}
+
+/* Style the login form container */
+.col-md-4 {
+    background-color: #F5D2BB;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the form horizontally */
+}
+
+/* Style the form inputs */
+.form-floating input.form-control {
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Style for Log In button with a different color */
+#btn-submit {
+    padding: 15px;
+    background-color: #007bff; /* Use a different color, for example, a shade of blue */
+    color: #fff; /* White text color for better contrast */
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 16px;
+    width: 200px;
+    margin-top: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    #btn-submit:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+
+
+/* Style for button container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Style for custom buttons */
+.custom-button {
+    padding: 15px;
+    background-color: #554174;
+    color: #c5c6e2;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 16px;
+    width: 200px; /* Set a fixed width for consistency */
+    margin: 10px 0; /* Add margin between buttons */
+    text-align: center;
+}
+
+    .custom-button:hover {
+        background-color: #372A3D;
+        color: #c5c6e2;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
