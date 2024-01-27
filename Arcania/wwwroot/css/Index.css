@@ -25,13 +25,13 @@
 }
 
 /* Set styles for the registration buttons container */
-.registration-buttons-container {
+.buttons-container {
     text-align: center; /* Center the buttons horizontally */
     padding: 15px;
     justify-content: center; /* Center the buttons within the container */
 }
 
-.registration-button {
+.button {
     display: inline-block; /* Make the buttons appear in a line */
     margin: 0 10px; /* Add horizontal margin between buttons */
     padding: 15px; /* Increase padding for a larger button */
@@ -47,12 +47,39 @@
     font-size: 16px; /* Adjust the font size */
 }
 
-    .registration-button:hover {
+    .button:hover {
         background-color: #372A3D; /* Dark Purple from the palette on hover */
         color: #c5c6e2; /* Light color for text on hover */
         transform: translateY(-2px); /* Add a slight upward lift on hover */
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
     }
+
+.buttons-container form {
+    display: inline-block; /* Display the form as an inline-block */
+    margin: 0 10px; /* Horizontal margin to match the anchor tags */
+}
+
+    /* Apply similar styling to the button inside the form */
+    .buttons-container form button {
+        padding: 15px; /* Match padding of .registration-button */
+        background-color: #554174; /* Match background color */
+        color: #c5c6e2; /* Match text color */
+        border-radius: 25px; /* Match border radius */
+        border: none; /* No border */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Match box shadow */
+        text-align: center; /* Center the text */
+        font-weight: bold; /* Bold font weight */
+        font-size: 16px; /* Match font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        text-decoration: none; /* No text decoration */
+        display: inline-block; /* Display button as inline-block */
+    }
+
+        .buttons-container form button:hover {
+            background-color: #372A3D; /* Darker color on hover */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+            transform: translateY(-2px); /* Slight upward lift on hover */
+        }
 /* banner.css */
 
 .banner-container {

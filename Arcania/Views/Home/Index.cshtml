@@ -12,10 +12,22 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="registration-buttons-container text-center mt-3">
-                    <a class="registration-button" href="/Identity/Account/Register">Register</a>
-                    <a class="registration-button" href="/Identity/Account/Login">Login</a>
-                </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="buttons-container text-center mt-3">
+                        <a class="button" asp-controller="Game" asp-action="Index">Enter Game</a>
+                        <form method="post" asp-action="Logout">
+                            <button type="submit" class="button">Log Out</button>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <div class="buttons-container text-center mt-3">
+                        <a class="button" href="/Identity/Account/Register">Register</a>
+                        <a class="button" href="/Identity/Account/Login">Login</a>
+                    </div>
+                }
                 <div class="row">
                     <!-- Left frame with game description -->
                     <div class="col-md-6">

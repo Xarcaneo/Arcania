@@ -1,0 +1,8 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <p>Hello, @User.Identity.Name!</p>
+}
+else
+{
+    <p>Hello, guest!</p>
+}
