@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Arcania.Controllers
+namespace Arcania.Areas.Player.Controllers
 {
+    [Area("Player")]
     public class GameController : Controller
     {
         public IActionResult Index()

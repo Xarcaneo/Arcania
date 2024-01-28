@@ -107,7 +107,7 @@ namespace Arcania.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl ??= Url.Action("Index", "Game"); // Redirect to the Game/Index if no specific return URL is provided
+            returnUrl ??= Url.Action("Index", "Game", new { area = "Player" });
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             

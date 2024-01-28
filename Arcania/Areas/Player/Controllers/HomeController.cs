@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace Arcania.Controllers
+namespace Arcania.Areas.Player.Controllers
 {
+    [Area("Player")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
