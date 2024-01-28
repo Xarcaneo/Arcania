@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Arcania.Utility;
+using Arcania.DataAccess.DbInitializer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,10 +14,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
-    options.SignIn.RequireConfirmedAccount = true;
+    options.SignIn.RequireConfirmedAccount = false;
     options.User.RequireUniqueEmail = true;
 }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
@@ -36,9 +38,19 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+SeedDatabase();
 app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{area=Player}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+        dbInitializer.Initialize();
+    }
+}

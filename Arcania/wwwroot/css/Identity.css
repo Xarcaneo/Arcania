@@ -81,3 +81,9 @@ body {
         transform: translateY(-2px);
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     }
+
+/* Set styles for the label background */
+.label-background {
+    background-color: #554174;
+    margin-bottom: 10px; /* Add margin at the bottom to create space between the label and items below */
+}

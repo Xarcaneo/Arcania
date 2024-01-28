@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Arcania.Models\Arcania.Models.csproj" />
+    <ProjectReference Include="..\Arcania.Utility\Arcania.Utility.csproj" />
   </ItemGroup>
 
 </Project>
