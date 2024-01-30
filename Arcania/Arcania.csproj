@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Arcania.DataAccess\Arcania.DataAccess.csproj" />
+    <ProjectReference Include="..\Arcania.Services\Arcania.Services.csproj" />
     <ProjectReference Include="..\Arcania.Utility\Arcania.Utility.csproj" />
   </ItemGroup>
 

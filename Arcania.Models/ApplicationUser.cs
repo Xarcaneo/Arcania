@@ -6,6 +6,6 @@ namespace Arcania.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
-        public string Name { get; set; }
+        public bool HasCharacter { get; set; } = false;
     }
 }

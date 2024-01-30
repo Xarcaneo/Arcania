@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Arcania.Utility;
 using Arcania.DataAccess.DbInitializer;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Arcania.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddScoped<IUserCharacterService, UserCharacterService>();
 
 var app = builder.Build();
 
