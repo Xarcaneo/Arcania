@@ -1,0 +1,132 @@
+﻿/* Game.css */
+
+/* Custom styles for the game section */
+body {
+    color: black;
+    margin-top: 100px;
+}
+
+/* Center the content */
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+}
+
+/* Style the character creation form container */
+.col-md-12 {
+    background-color: #F5D2BB;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#btn-submit {
+    display: inline-block; /* Make the buttons appear in a line */
+    margin: 0 10px; /* Add horizontal margin between buttons */
+    padding: 15px; /* Increase padding for a larger button */
+    max-width: 200px; /* Set maximum width for the button */
+    background-color: #554174; /* English Violet from the palette */
+    color: #c5c6e2; /* Light color for text */
+    text-decoration: none; /* Remove underline from the link */
+    border: none; /* Remove button border */
+    border-radius: 25px; /* Add a larger border radius for a fantasy look */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center; /* Center the text horizontally */
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Adjust the font size */
+    margin-top: 50px;
+}
+
+    #btn-submit:hover {
+        background-color: #372A3D; /* Dark Purple from the palette on hover */
+        color: #c5c6e2; /* Light color for text on hover */
+        transform: translateY(-2px); /* Add a slight upward lift on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+    }
+
+/* Style for label background */
+.label-background {
+    background-color: #554174;
+    color: #c5c6e2; /* Ensure text color contrasts well with the background */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between label and form */
+}
+
+/* Style for the mini label */
+.mini-label {
+    display: block;
+    width: 100%;
+    background-color: #8A2BE2; /* Example: a shade of blue-purple */
+    color: #FFFFFF; /* White text color for contrast */
+    padding: 5px 10px;
+    border-radius: 15px; /* Rounded corners for the label */
+    font-size: 14px; /* Smaller font size for the mini label */
+    margin-bottom: 10px; /* Space below the label */
+    font-weight: bold; /* Optional: make the label text bold */
+}
+
+.form-label {
+    display: block; /* Ensure it's a block to take full width */
+    text-align: center; /* Center the text (and any inline-block elements within it) */
+}
+
+.radio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust the minmax values as needed */
+    gap: 10px; /* Adjust the gap between grid items */
+    align-items: center;
+}
+
+    .radio-grid div {
+        display: flex;
+        align-items: center;
+    }
+
+    .radio-grid label {
+        margin-left: 5px; /* Adjust the space between the radio button and its label */
+    }
+
+.character-creation-container {
+    display: flex;
+   
+    justify-content: center;
+    align-items: flex-start; /* Aligns items at the start of the container */
+    gap: 20px; /* Adjust the space between the form and the image */
+}
+
+.form-container {
+    background-color: #F5D2BB;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; /* Allows the form to grow and fill available space */
+    border: 4px solid #554174; /* Example: A thicker border with a specific color */
+}
+
+.form-container-description {
+    background-color: #F5D2BB;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+    border: 4px solid #554174; /* Example: A thicker border with a specific color */
+
+    word-break: break-all;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .avatar-container img {
+        width: 300px; /* Example fixed width */
+        height: 300px; /* Example fixed height */
+    }

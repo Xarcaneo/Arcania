@@ -1,7 +1,59 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<header><link rel="stylesheet" href="~/css/Game.css" /></header>
 
-CREATE
+
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="label-background">
+                <h2>Create Character</h2>
+            </div>
+            <div class="character-creation-container">
+                <div class="form-container">
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label"><span class="mini-label">Gender:</span></label>
+                            <div class="radio-grid">
+                                <div>
+                                    <input type="radio" name="gender" id="male" value="male" checked>
+                                    <label for="male">Male</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="gender" id="female" value="female">
+                                    <label for="female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label"><span class="mini-label">Race:</span></label>
+                            <div class="radio-grid">
+                                <div>
+                                    <input type="radio" name="race" id="human" value="human" checked>
+                                    <label for="human">Human</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="race" id="dwarf" value="dwarf" checked>
+                                    <label for="dwarf">Dwarf</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="race" id="elf" value="elf">
+                                    <label for="elf">Elf</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Submit button -->
+                        <button type="submit" id="btn-submit">Create Character</button>
+                    </form>
+                </div>
+                <div class="form-container-description">
+
+                    </div>
+                <div class="avatar-container">
+                    <img src="/content/characters/Dwarf_male.png" alt="Character Avatar" id="character-avatar">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/updateCharacterAvatar.js" asp-append-version="true"></script>
+</body>
