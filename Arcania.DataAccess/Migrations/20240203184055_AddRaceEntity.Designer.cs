@@ -4,6 +4,7 @@ using Arcania.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Arcania.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240203184055_AddRaceEntity")]
+    partial class AddRaceEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,38 +44,6 @@ namespace Arcania.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Races");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "The versatile and adaptable human race.",
-                            Name = "Human"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "The stout and hearty dwarf race.",
-                            Name = "Dwarf"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "The graceful and agile elf race.",
-                            Name = "Elf"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "The clever and inventive gnome race.",
-                            Name = "Gnome"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "The powerful and intimidating ogre race.",
-                            Name = "Ogre"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

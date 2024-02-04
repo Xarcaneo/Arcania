@@ -1,21 +1,16 @@
-﻿const raceDescriptions = {
-    human: "Description for Human Race",
-    elf: "Description for Elf Race",
-    dwarf: "Description for Dwarf Race",
-    // Add descriptions for other races
-};
-
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
     // Function to update the avatar image and description
     function updateAvatarAndDescription() {
         const genderInput = document.querySelector('input[name="gender"]:checked');
         const raceInput = document.querySelector('input[name="race"]:checked');
         const avatarImg = document.getElementById('character-avatar');
-        const raceDescriptionDiv = document.querySelector('.form-container-description'); // Get the description div
+        const raceDescriptionDiv = document.getElementById('race-description'); // Get the description div
 
         if (genderInput && raceInput) {
             const gender = genderInput.value;
             const race = raceInput.value;
+            // Retrieve the description from the data attribute of the selected race radio button
+            const description = raceInput.getAttribute('data-description');
 
             // Construct the image path based on selected gender and race
             // Example: "images/avatar-male-human.png"
@@ -25,10 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
             avatarImg.src = imagePath;
             avatarImg.alt = `Avatar for ${race} ${gender}`;
 
-            // Update the race description based on the selected race
-            if (raceDescriptions.hasOwnProperty(race)) {
-                raceDescriptionDiv.textContent = raceDescriptions[race];
-            }
+            // Update the race description div
+            raceDescriptionDiv.textContent = description;
         }
     }
 
@@ -37,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         input.addEventListener('change', updateAvatarAndDescription);
     });
 
-    // Initial update in case the default selection is not the desired initial avatar
+    // Initial update in case the default selection is not the desired initial avatar and description
     updateAvatarAndDescription();
 });

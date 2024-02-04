@@ -1,5 +1,6 @@
-﻿<header><link rel="stylesheet" href="~/css/Game.css" /></header>
+﻿@model IEnumerable<Race>
 
+<header><link rel="stylesheet" href="~/css/Game.css" /></header>
 
 <body>
     <div class="row">
@@ -27,18 +28,19 @@
                         <div class="form-group">
                             <label class="form-label"><span class="mini-label">Race:</span></label>
                             <div class="radio-grid">
-                                <div>
-                                    <input type="radio" name="race" id="human" value="human" checked>
-                                    <label for="human">Human</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="race" id="dwarf" value="dwarf" checked>
-                                    <label for="dwarf">Dwarf</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="race" id="elf" value="elf">
-                                    <label for="elf">Elf</label>
-                                </div>
+                                <!-- Display race options with descriptions and bonuses -->
+                                @{
+                                    bool isFirst = true; // Initialize a flag to identify the first item
+                                }
+
+                                @foreach (var race in Model)
+                                {
+                                    <div>
+                                        <input type="radio" name="race" id="@race.Name" value="@race.Name" data-description="@race.Description" @(isFirst ? "checked" : "")>
+                                        <label for="@race.Name">@race.Name</label>
+                                    </div>
+                                    isFirst = false; // After the first item, set the flag to false
+                                }
                             </div>
                         </div>
                         <!-- Submit button -->
@@ -46,14 +48,14 @@
                     </form>
                 </div>
                 <div class="form-container-description">
-
-                    </div>
+                    <p id="race-description"></p>
+                </div>
                 <div class="avatar-container">
-                    <img src="/content/characters/Dwarf_male.png" alt="Character Avatar" id="character-avatar">
+                    <img alt="Character Avatar" id="character-avatar">
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="~/js/updateCharacterAvatar.js" asp-append-version="true"></script>
+    <script src="~/js/updateCharacterAttributes.js" asp-append-version="true"></script>
 </body>
