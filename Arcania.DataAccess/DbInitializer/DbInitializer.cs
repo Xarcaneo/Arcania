@@ -43,7 +43,7 @@ namespace Arcania.DataAccess.DbInitializer
                 {
                     UserName = "Xarcane",
                     Email = "patryk.dudka@hotmail.com",
-                    EmailConfirmed = true 
+                    EmailConfirmed = true
                 }, "Admin123*").GetAwaiter().GetResult();
 
                 ApplicationUser user = _db.ApplicationUsers.FirstOrDefault(u => u.Email == "patryk.dudka@hotmail.com");

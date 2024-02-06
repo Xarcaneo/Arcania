@@ -1,10 +1,10 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
     // Function to update the avatar image and description
     function updateAvatarAndDescription() {
-        const genderInput = document.querySelector('input[name="gender"]:checked');
-        const raceInput = document.querySelector('input[name="race"]:checked');
-        const avatarImg = document.getElementById('character-avatar');
-        const raceDescriptionDiv = document.getElementById('race-description'); // Get the description div
+        const genderInput = document.querySelector('input[name="SelectedGender"]:checked'); // Change the name to match your HTML
+        const raceInput = document.querySelector('input[name="SelectedRace"]:checked');
+        const avatarImg = document.getElementById('Character-avatar');
+        const raceDescriptionDiv = document.getElementById('Race-description'); // Get the description div
 
         if (genderInput && raceInput) {
             const gender = genderInput.value;
@@ -26,7 +26,7 @@
     }
 
     // Add event listeners to all gender and race radio buttons
-    document.querySelectorAll('input[name="gender"], input[name="race"]').forEach(input => {
+    document.querySelectorAll('input[name="SelectedGender"], input[name="race"]').forEach(input => {
         input.addEventListener('change', updateAvatarAndDescription);
     });
 

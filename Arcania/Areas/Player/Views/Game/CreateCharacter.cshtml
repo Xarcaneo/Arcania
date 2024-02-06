@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Race>
+﻿@model CharacterCreationVM
 
 <header><link rel="stylesheet" href="~/css/Game.css" /></header>
 
@@ -10,16 +10,16 @@
             </div>
             <div class="character-creation-container">
                 <div class="form-container">
-                    <form>
+                    <form method="post">
                         <div class="form-group">
                             <label class="form-label"><span class="mini-label">Gender:</span></label>
                             <div class="radio-grid">
                                 <div>
-                                    <input type="radio" name="gender" id="male" value="male" checked>
+                                    <input asp-for="@Model.Character.SelectedGender" type="radio" name="SelectedGender" id="male" value="male" checked>
                                     <label for="male">Male</label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="gender" id="female" value="female">
+                                    <input asp-for="@Model.Character.SelectedGender" type="radio" name="SelectedGender" id="female" value="female">
                                     <label for="female">Female</label>
                                 </div>
                             </div>
@@ -33,10 +33,10 @@
                                     bool isFirst = true; // Initialize a flag to identify the first item
                                 }
 
-                                @foreach (var race in Model)
+                                @foreach (var race in Model.AvailableRaces)    
                                 {
                                     <div>
-                                        <input type="radio" name="race" id="@race.Name" value="@race.Name" data-description="@race.Description" @(isFirst ? "checked" : "")>
+                                        <input type="radio" name="SelectedRace" id="@race.Name" value="@race.Name" data-description="@race.Description" @(isFirst ? "checked" : "")>
                                         <label for="@race.Name">@race.Name</label>
                                     </div>
                                     isFirst = false; // After the first item, set the flag to false
@@ -48,10 +48,10 @@
                     </form>
                 </div>
                 <div class="form-container-description">
-                    <p id="race-description"></p>
+                    <p id="Race-description"></p>
                 </div>
                 <div class="avatar-container">
-                    <img alt="Character Avatar" id="character-avatar">
+                    <img alt="Character Avatar" id="Character-avatar">
                 </div>
             </div>
         </div>

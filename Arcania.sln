@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arcania.Models", "Arcania.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arcania.Utility", "Arcania.Utility\Arcania.Utility.csproj", "{EA5DFC72-935D-4E7F-BE1B-08F884FD7335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcania.Services", "Arcania.Services\Arcania.Services.csproj", "{B8CEE74D-9B3E-4E16-BC8E-AE190D8F458B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{EA5DFC72-935D-4E7F-BE1B-08F884FD7335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA5DFC72-935D-4E7F-BE1B-08F884FD7335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA5DFC72-935D-4E7F-BE1B-08F884FD7335}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8CEE74D-9B3E-4E16-BC8E-AE190D8F458B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8CEE74D-9B3E-4E16-BC8E-AE190D8F458B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8CEE74D-9B3E-4E16-BC8E-AE190D8F458B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8CEE74D-9B3E-4E16-BC8E-AE190D8F458B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

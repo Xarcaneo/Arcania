@@ -9,5 +9,6 @@ namespace Arcania.Services
     public interface IUserCharacterService
     {
         Task<bool> HasCharacterAsync(string userId);
+        Task CreateCharacterForUserAsync(string userId, string selectedRace, string selectedGender);
     }
 }

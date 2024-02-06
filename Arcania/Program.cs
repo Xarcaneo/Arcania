@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Arcania.Utility;
 using Arcania.DataAccess.DbInitializer;
-using Arcania.Services;
 using Arcania.DataAccess.Repository.IRepository;
 using Arcania.Models;
 using Arcania.DataAccess.Repository;
@@ -32,8 +31,9 @@ builder.Services.ConfigureApplicationCookie(options =>
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
-builder.Services.AddScoped<IUserCharacterService, UserCharacterService>();
 builder.Services.AddScoped<IRepository<Race>, Repository<Race>>();
+builder.Services.AddScoped<IRepository<ApplicationUser>, Repository<ApplicationUser>>();
+builder.Services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
 
 var app = builder.Build();
 
